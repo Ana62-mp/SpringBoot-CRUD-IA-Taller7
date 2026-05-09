@@ -4,16 +4,18 @@ public class Videojuego {
 	private String nombre;
 	private int codigo;
 	private String plataforma;
+	private String genero;
 	private double precio;
 	private int stock;
 
 	public Videojuego() {
 	}
 
-	public Videojuego(String nombre, int codigo, String plataforma, double precio, int stock) {
+	public Videojuego(String nombre, int codigo, String plataforma, String genero, double precio, int stock) {
 		this.nombre = nombre;
 		this.codigo = codigo;
 		this.plataforma = plataforma;
+		this.genero = genero;
 		this.precio = precio;
 		this.stock = stock;
 	}
@@ -42,6 +44,14 @@ public class Videojuego {
 		this.plataforma = plataforma;
 	}
 
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
 	public double getPrecio() {
 		return precio;
 	}
@@ -60,7 +70,7 @@ public class Videojuego {
 
 	@Override
 	public String toString() {
-		return "Videojuego [nombre=" + nombre + ", codigo=" + codigo + ", plataforma=" + plataforma + ", precio="
-				+ precio + ", stock=" + stock + "]";
+		return "Videojuego [nombre=" + nombre + ", codigo=" + codigo + ", plataforma=" + plataforma + ", genero="
+				+ genero + ", precio=" + precio + ", stock=" + stock + "]";
 	}
 }

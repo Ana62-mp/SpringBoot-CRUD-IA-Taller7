@@ -45,6 +45,7 @@ public class VideojuegoService {
 		if (videojuegoExiste != null) {
 			videojuegoExiste.setNombre(videojuegoActualizado.getNombre());
 			videojuegoExiste.setPlataforma(videojuegoActualizado.getPlataforma());
+			videojuegoExiste.setGenero(videojuegoActualizado.getGenero());
 			videojuegoExiste.setPrecio(videojuegoActualizado.getPrecio());
 			videojuegoExiste.setStock(videojuegoActualizado.getStock());
 
