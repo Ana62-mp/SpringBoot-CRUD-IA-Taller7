@@ -1,0 +1,253 @@
+{
+  "info": {
+    "_postman_id": "6d154cfa-7f85-48b3-a042-2004af80b543",
+    "name": "CRUD Videojuegos Spring Boot",
+    "description": "Colección para probar el CRUD de videojuegos en Spring Boot usando ArrayList en memoria.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50590300",
+    "_collection_link": "https://go.postman.co/collection/50590300-6d154cfa-7f85-48b3-a042-2004af80b543?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1. Crear videojuego",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Minecraft\",\n  \"codigo\": 201,\n  \"plataforma\": \"PC\",\n  \"precio\": 26.95,\n  \"stock\": 15\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/videojuegos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. Crear videojuego duplicado",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"FIFA 24\",\n  \"codigo\": 201,\n  \"plataforma\": \"PlayStation 5\",\n  \"precio\": 59.99,\n  \"stock\": 12\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/videojuegos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Crear segundo videojuego",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"The Legend of Zelda: Tears of the Kingdom\",\n  \"codigo\": 202,\n  \"plataforma\": \"Nintendo Switch\",\n  \"precio\": 69.99,\n  \"stock\": 8\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/videojuegos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. Listar videojuegos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/videojuegos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. Buscar videojuego existente por codigo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/videojuegos/201",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos",
+            "201"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. Buscar videojuego no existente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/videojuegos/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. Actualizar videojuego",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Minecraft Deluxe Edition\",\n  \"codigo\": 201,\n  \"plataforma\": \"PC\",\n  \"precio\": 35.5,\n  \"stock\": 20\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/videojuegos/201",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos",
+            "201"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "8. Actualizar videojuego no existente",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Mario Kart 8 Deluxe\",\n  \"codigo\": 999,\n  \"plataforma\": \"Nintendo Switch\",\n  \"precio\": 59.99,\n  \"stock\": 7\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/videojuegos/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "9. Eliminar videojuego existente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/videojuegos/201",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos",
+            "201"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10. Eliminar videojuego no existente",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/videojuegos/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "videojuegos",
+            "999"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
